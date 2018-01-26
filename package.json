@@ -1,13 +1,13 @@
 {
-  "name": "rayr-cli",
-  "version": "0.0.1",
+  "name": "react-rayr-cli",
+  "version": "0.0.2",
   "description": "A simple CLI for creating your projects",
   "bin": {
     "rayr": "bin/rayr"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jrainlau/scion.git"
+    "url": "git+https://github.com/rayrcoder/react-rayr-cli.git"
   },
   "keywords": [
     "rayr",
@@ -17,9 +17,8 @@
   "author": "lilei",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jrainlau/scion/issues"
+    "url": "https://github.com/rayrcoder/react-rayr-cli.git/issues"
   },
-  "homepage": "https://github.com/jrainlau/scion#readme",
   "dependencies": {
     "async": "^2.6.0",
     "chalk": "^1.1.3",
