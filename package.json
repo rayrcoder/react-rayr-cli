@@ -1,6 +1,6 @@
 {
   "name": "rayr-cli",
-  "version": "0.2.0",
+  "version": "0.0.1",
   "description": "A simple CLI for creating your projects",
   "bin": {
     "rayr": "bin/rayr"
@@ -27,7 +27,9 @@
     "download-git-repo": "^1.0.0",
     "handlebars": "^4.0.8",
     "inquirer": "^3.0.6",
+    "make-dir": "^1.1.0",
     "metalsmith": "^2.3.0",
-    "ora": "^1.2.0"
+    "ora": "^1.2.0",
+    "recursive-copy": "^2.0.8"
   }
 }

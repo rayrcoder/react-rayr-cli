@@ -1,37 +1,30 @@
-const {prompt} = require('inquirer')
-const {writeFile} = require('fs')
-const {listTable} = require(`${__dirname}/../utils`)
-const {resolve} = require('path')
-const chalk = require('chalk')
-const download = require('download-git-repo')
-const ora = require('ora')
-
-let tplList = require(`${__dirname}/../templates`)
+const {prompt} = require('inquirer');
+const makeDir = require('make-dir');
+const path = require('path');
+const copy = require('recursive-copy');
 
 const question = [
     {
         type: 'input',
         name: 'name',
-        message: 'Template name:',
+        message: 'React Component name:',
         validate(val) {
-            if (tplList[val]) {
-                return true
-            } else if (val === '') {
-                return 'Name is required!'
-            } else if (!tplList[val]) {
-                return 'This template doesn\'t exists.'
+            if (val === '') {
+                return 'React Component Name is required!'
+            } else {
+                return true;
             }
         }
     },
     {
         type: 'input',
-        name: 'project',
-        message: 'Project name:',
+        name: 'author',
+        message: 'React Component author:',
         validate(val) {
             if (val !== '') {
                 return true
             }
-            return 'Project name is required!'
+            return 'React Component author is required!'
         }
     },
     {
@@ -42,19 +35,13 @@ const question = [
     }
 ]
 
-module.exports = prompt(question).then(({name, project, place}) => {
-    const gitPlace = tplList[name]['owner/name']
-    const gitBranch = tplList[name]['branch']
-    const spinner = ora('Downloading template...')
+module.exports = prompt(question).then(({name, author, place}) => {
 
-    spinner.start()
-
-    download(`${gitPlace}#${gitBranch}`, `${place}/${project}`, (err) => {
-        if (err) {
-            console.log(chalk.red(err))
-            process.exit()
-        }
-        spinner.stop()
-        console.log(chalk.green('New project has been initialized successfully!'))
-    })
-})
+    makeDir(`./react-rayr-${name}`).then(p => {
+        copy(path.resolve(__dirname, '../tmpl'), p).then(res => {
+            console.info('Copied ' + res.length + ' files');
+        }).catch((error) => {
+            console.error('Copy failed: ' + error);
+        });
+    });
+});
