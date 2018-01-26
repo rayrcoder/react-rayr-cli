@@ -1,6 +1,6 @@
 {
   "name": "react-rayr-btn",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "react-rayr-btn",
   "main": "lib/index.js",
   "scripts": {
@@ -67,12 +67,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rayrlee2013/react-rayr-btn.git"
+    "url": "https://github.com/rayrcoder/react-rayr-dropdown"
   },
   "author": "lilei",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rayrlee2013/react-rayr-btn/issues"
+    "url": "https://github.com/rayrcoder/react-rayr-dropdown/issues"
   },
-  "homepage": "https://github.com/rayrlee2013/react-rayr-btn"
+  "homepage": "https://github.com/rayrcoder/react-rayr-dropdown"
 }

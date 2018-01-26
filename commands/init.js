@@ -1,7 +1,8 @@
-const {prompt} = require('inquirer');
+const inquirer = require('inquirer');
 const makeDir = require('make-dir');
 const path = require('path');
-const copy = require('recursive-copy');
+const fs = require('fs-extra');
+const async = require('async');
 
 const question = [
     {
@@ -35,13 +36,28 @@ const question = [
     }
 ]
 
-module.exports = prompt(question).then(({name, author, place}) => {
-
+module.exports = inquirer.prompt(question).then(({name, author, place}) => {
     makeDir(`./react-rayr-${name}`).then(p => {
-        copy(path.resolve(__dirname, '../tmpl'), p).then(res => {
-            console.info('Copied ' + res.length + ' files');
-        }).catch((error) => {
-            console.error('Copy failed: ' + error);
+
+        let arr = [
+            function (fn) {
+                fs.copy(path.resolve(__dirname, '../tmpl/.babelrc'), `${p}/.babelrc`, err => {
+                    if (err) return console.error(err)
+                    console.log(`${p}/.babelrc success!`);
+                    fn(err, null);
+                });
+            },
+            function (fn) {
+                fs.copy(path.resolve(__dirname, '../tmpl/.babelrc'), `${p}/.babelrc`, err => {
+                    if (err) return console.error(err)
+                    console.log(`${p}/.babelrc success!`);
+                    fn(err, null);
+                });
+            }
+        ];
+
+        async.waterfall(arr, function (err, result) {
+            console.log(result);
         });
     });
 });
