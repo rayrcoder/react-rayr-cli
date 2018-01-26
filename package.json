@@ -1,0 +1,33 @@
+{
+  "name": "rayr-cli",
+  "version": "0.2.0",
+  "description": "A simple CLI for creating your projects",
+  "bin": {
+    "rayr": "bin/rayr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrainlau/scion.git"
+  },
+  "keywords": [
+    "rayr",
+    "cli",
+    "es6"
+  ],
+  "author": "lilei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jrainlau/scion/issues"
+  },
+  "homepage": "https://github.com/jrainlau/scion#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "cli-table": "^0.3.1",
+    "commander": "^2.9.0",
+    "download-git-repo": "^1.0.0",
+    "handlebars": "^4.0.8",
+    "inquirer": "^3.0.6",
+    "metalsmith": "^2.3.0",
+    "ora": "^1.2.0"
+  }
+}
