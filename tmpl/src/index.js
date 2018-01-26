@@ -1,3 +1,3 @@
-import ReactDemo from './ReactDemo.js';
+import RayrDemo from './RayrDemo.js';
 
-export {ReactDemo};
+export {RayrDemo};

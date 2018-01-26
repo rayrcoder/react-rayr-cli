@@ -1,5 +1,4 @@
 import webpack from 'webpack';
-import path from 'path';
 import camelCase from 'camelcase';
 import pkg from './package.json';
 

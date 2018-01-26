@@ -1,7 +1,7 @@
 {
-  "name": "react-rayr-btn",
+  "name": "react-rayr-demo",
   "version": "0.0.1",
-  "description": "react-rayr-btn",
+  "description": "react-rayr-demo",
   "main": "lib/index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development babel-node example/webpack.server.js --hot",
@@ -12,7 +12,7 @@
     "react-component",
     "react",
     "component",
-    "react-rayr-btn"
+    "react-rayr-demo"
   ],
   "dependencies": {
     "classnames": "^2.2.5",
@@ -67,12 +67,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rayrcoder/react-rayr-dropdown"
+    "url": "https://github.com/rayrcoder/react-rayr-demo"
   },
   "author": "lilei",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rayrcoder/react-rayr-dropdown/issues"
+    "url": "https://github.com/rayrcoder/react-rayr-demo/issues"
   },
-  "homepage": "https://github.com/rayrcoder/react-rayr-dropdown"
+  "homepage": "https://github.com/rayrcoder/react-rayr-demo"
 }

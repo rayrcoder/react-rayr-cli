@@ -1,13 +1,16 @@
-import 'react-rayr-btn/src/RayrBtn.scss';
+import 'react-rayr-demo/src/RayrDemo.scss';
 
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {RayrBtn} from 'react-rayr-btn';
+import {RayrDemo} from 'react-rayr-demo';
 
 function App() {
     return (
-        <h1>组件脚手架测试 <RayrBtn/></h1>
+        <div>
+            <h1>组件初始化</h1>
+            <RayrDemo/>
+        </div>
     )
 }
 
