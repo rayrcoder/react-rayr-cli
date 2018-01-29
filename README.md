@@ -24,7 +24,7 @@ author:(lilei):  xxxx  //author name
 
 ```shell
 cd react-rayr-demo
-
+npm install
 npm start  //example dev
 
 or
