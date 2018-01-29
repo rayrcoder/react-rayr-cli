@@ -1,7 +1,0 @@
-node_modules
-example/dist
-.idea
-npm-debug.log
-rev
-*.map
-*.rb
